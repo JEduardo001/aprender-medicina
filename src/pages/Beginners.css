@@ -1,0 +1,379 @@
+/* ========================================
+   Beginners Page Styles
+   ======================================== */
+
+/* Hero Section */
+.beginners-hero {
+    position: relative;
+    padding: var(--space-24) 0 var(--space-16);
+    overflow: hidden;
+}
+
+.beginners-hero__background {
+    position: absolute;
+    inset: 0;
+}
+
+.beginners-hero__orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: var(--success);
+    filter: blur(120px);
+    opacity: 0.2;
+    top: -30%;
+    right: -10%;
+}
+
+.beginners-hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.beginners-hero__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    color: var(--text-dark-secondary);
+    margin-bottom: var(--space-6);
+    transition: all var(--transition-base);
+}
+
+.beginners-hero__back:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-dark-primary);
+}
+
+.beginners-hero__tag {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    color: var(--success);
+    margin-bottom: var(--space-4);
+}
+
+.beginners-hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: var(--space-3);
+}
+
+.beginners-hero__subtitle {
+    font-size: var(--text-xl);
+    color: var(--success);
+    margin-bottom: var(--space-4);
+}
+
+.beginners-hero__description {
+    font-size: var(--text-lg);
+    color: var(--text-dark-secondary);
+    line-height: 1.8;
+}
+
+/* Lessons Section */
+.lessons {
+    padding: var(--space-16) 0;
+}
+
+.lessons__title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-10);
+    text-align: center;
+}
+
+.lessons__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-6);
+}
+
+.lesson-card {
+    background: var(--bg-dark-secondary);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transition: all var(--transition-base);
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.lesson-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-6);
+}
+
+.lesson-card__number {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    background: var(--gradient-success);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.5;
+}
+
+.lesson-card__icon {
+    font-size: 2.5rem;
+}
+
+.lesson-card__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.lesson-card__content {
+    color: var(--text-dark-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-6);
+}
+
+.lesson-card__points {
+    background: var(--bg-dark-tertiary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+}
+
+.lesson-card__points-title {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--success);
+    margin-bottom: var(--space-3);
+}
+
+.lesson-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.lesson-card__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--text-dark-secondary);
+}
+
+.lesson-card__bullet {
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+/* Systems Overview */
+.systems-overview {
+    padding: var(--space-16) 0;
+}
+
+.systems-overview__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-10);
+}
+
+.systems-overview__title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.systems-overview__description {
+    color: var(--text-dark-secondary);
+    line-height: 1.8;
+}
+
+.systems-overview__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-4);
+}
+
+.system-mini-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--bg-dark-secondary);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-base);
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.system-mini-card:hover {
+    transform: translateX(10px);
+    border-color: var(--card-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.system-mini-card__emoji {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.system-mini-card__content {
+    flex: 1;
+}
+
+.system-mini-card__title {
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+}
+
+.system-mini-card__subtitle {
+    font-size: var(--text-sm);
+    color: var(--text-dark-secondary);
+}
+
+.system-mini-card__arrow {
+    color: var(--card-color);
+    font-size: var(--text-xl);
+    transition: transform var(--transition-base);
+}
+
+.system-mini-card:hover .system-mini-card__arrow {
+    transform: translateX(5px);
+}
+
+/* Tips Section */
+.tips {
+    padding: var(--space-16) 0;
+}
+
+.tips__card {
+    background: var(--gradient-success);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10);
+    text-align: center;
+}
+
+.tips__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-4);
+}
+
+.tips__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-8);
+}
+
+.tips__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-6);
+}
+
+.tip {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+    text-align: left;
+}
+
+.tip__icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: var(--space-3);
+}
+
+.tip__title {
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+}
+
+.tip__text {
+    font-size: var(--text-sm);
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Next Steps */
+.next-steps {
+    padding: var(--space-16) 0;
+    text-align: center;
+}
+
+.next-steps__title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.next-steps__description {
+    color: var(--text-dark-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.next-steps__buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.next-steps__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--radius-xl);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.next-steps__btn--primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.next-steps__btn--secondary {
+    background: var(--gradient-secondary);
+    color: white;
+}
+
+.next-steps__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lessons__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tips__card {
+        padding: var(--space-6);
+    }
+
+    .tips__grid {
+        grid-template-columns: 1fr;
+    }
+}
